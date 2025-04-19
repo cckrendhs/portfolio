@@ -1,0 +1,158 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketch</title>
+    <!-- 引入外部樣式表 -->
+    <link rel="stylesheet" type="text/css" href="portfolio.css">
+    <!-- 引入 p5.js 和 p5.sound 函式庫 -->
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+    <script src="portfolioScript.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- 左側導覽列 -->
+      <nav id="sidebar" class="sidebar">
+        <button id="toggle-btn">☰</button>
+        <ul>
+          <li>
+            <a href="index.html">
+              <span class="icon">🏠</span>
+              <span class="text">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="portfolio.html">
+              <span class="icon">✨</span>
+              <span class="text">Portfolio</span>
+            </a>
+          </li>
+          <li>
+            <a href="music.html">
+              <span class="icon">🎵</span>
+              <span class="text">Music</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- 主內容區域 -->
+      <div class="main-content">
+        <!-- 背景動畫畫布 -->
+        <div id="portfolio-sketch-container"></div>
+      
+        <!-- 內容區域 -->
+        <div class="content">
+          <img src="image/資訊化2.png" alt="MEphoto">
+          <h1>- 作品集 -</h1>
+          <h4>莊佳晨</h4>
+          <p>國立台北科技大學 / 互動設計系</p>
+          <div class="able">
+            <img src="image/ai.png" alt="ai">
+            <img src="image/ps.png" alt="ps">
+            <img src="image/id.png" alt="id">
+            <img src="image/blender.png" alt="blender">
+            <img src="image/isbis.png" alt="isbis">
+          </div>
+
+          <div class="part1">
+            <h4>< 人物插圖 ></h4>
+          </div>
+
+          <!-- 圖片輪播1 -->
+          <div class="image-slider" id="slider1">
+            <button class="prev" onclick="moveSlide(-1, 0)">❮</button>
+            <div class="slider-container">
+                <img class="slide" src="image/作品11.PNG" alt="作品11">
+                <img class="slide" src="image/作品9.PNG" alt="作品9">
+                <img class="slide" src="image/作品10.PNG" alt="作品10">
+                <img class="slide" src="image/作品20.jpg" alt="作品20">
+                <img class="slide" src="image/作品18.jpg" alt="作品18">
+                <img class="slide" src="image/作品15.jpg" alt="作品15">
+                <img class="slide" src="image/作品19.jpg" alt="作品19">
+                <img class="slide" src="image/作品12.PNG" alt="作品12">
+                <img class="slide" src="image/作品1.png" alt="作品1">
+                <img class="slide" src="image/作品3.jpg" alt="作品3">
+                <img class="slide" src="image/作品5.jpg" alt="作品5">
+                <img class="slide" src="image/作品4.JPG" alt="作品4">
+                
+            </div>
+            <button class="next" onclick="moveSlide(1, 0)">❯</button>
+          </div>
+        
+          <!-- 圖片輪播2 -->
+          <div class="image-slider2" id="slider2">
+            <button class="prev" onclick="moveSlide(-1, 1)">❮</button>
+            <div class="slider-container">
+                <img class="slide2" src="image/作品2-1.PNG" alt="作品1">
+                <img class="slide2" src="image/作品2-9.jpg" alt="作品2">
+                <img class="slide2" src="image/作品2-8.jpg" alt="作品2">
+                <img class="slide2" src="image/作品2-7.PNG" alt="作品2">
+                <img class="slide2" src="image/作品2-3.JPG" alt="作品3">
+                <img class="slide2" src="image/作品2-4.JPG" alt="作品4">
+                <img class="slide2" src="image/作品2-5.JPG" alt="作品5">
+                <img class="slide2" src="image/作品2-6.jpg" alt="作品6">
+            </div>
+            <button class="next" onclick="moveSlide(1, 1)">❯</button>
+          </div>
+
+          <div class="part2">
+            <h4>< 美編排版 ></h4>
+          </div>
+
+          <div class="image-slider3" id="slider3">
+            <div class="slider-container">
+                <img class="slide3" src="image/排版圖集/3.jpg" alt="作品1">
+                <img class="slide3" src="image/排版圖集/1.jpg" alt="作品2">
+                <img class="slide3" src="image/排版圖集/4.jpg" alt="作品2">
+            </div>
+          </div>
+
+          <div class="image-slider4" id="slider4">
+            <button class="prev" onclick="moveSlide(-1, 4)">❮</button>
+            <div class="slider-container">
+                <img class="slide4" src="image/排版圖集/5.jpg" alt="作品1">
+                <img class="slide4" src="image/排版圖集/2.jpg" alt="作品2">
+                <img class="slide4" src="image/排版圖集/橫1.jpg" alt="作品1">
+                <img class="slide4" src="image/排版圖集/橫2.jpg" alt="作品2">
+                <img class="slide4" src="image/排版圖集/橫3.jpg" alt="作品2">
+            </div>
+            <button class="next" onclick="moveSlide(1, 4)">❯</button>
+          </div>
+
+          <div class="image-slider6" id="slider6">
+            <button class="prev" onclick="moveSlide(-1, 6)">❮</button>
+            <div class="slider-container">
+                <img class="slide6" src="image/排版圖集/直1.jpg" alt="作品1">
+                <img class="slide6" src="image/排版圖集/直2.jpg" alt="作品2">
+                <img class="slide6" src="image/排版圖集/6.jpg" alt="作品3">
+                <img class="slide6" src="image/排版圖集/7.jpg" alt="作品4">
+                <img class="slide6" src="image/排版圖集/8.jpg" alt="作品3">
+                <img class="slide6" src="image/排版圖集/9.jpg" alt="作品4">
+                <img class="slide6" src="image/排版圖集/10.jpg" alt="作品5">
+            </div>
+            <button class="next" onclick="moveSlide(1, 6)">❯</button>
+          </div>
+
+          <div class="part3">
+            <h4>< 建模作品 ></h4>
+          </div>
+
+          <div class="image-slider7" id="slider7">
+            <div class="slider-container">
+              <img class="slide7" src="image/建模01.png" alt="作品1">
+              <img class="slide7" src="image/建模02.PNG" alt="作品2">
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <script src="libraries/p5.sound.min.js"></script>
+    <script src="portfolioSketch.js"></script>
+  </body>
+</html>
+
+

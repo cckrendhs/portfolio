@@ -1,0 +1,55 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sketch</title>
+
+    <!-- 引入外部樣式表 -->
+    <link rel="stylesheet" type="text/css" href="music.css">
+
+    <!-- 引入 p5.js 和 p5.sound 函式庫 -->
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+
+    <!-- 加載外部 JavaScript -->
+    <script src="musicSketch.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- 左側導覽列 -->
+      <nav id="sidebar" class="sidebar">
+        <button id="toggle-btn">☰</button>
+        <ul>
+          <li>
+            <a href="index.html" id="home-btn">
+              <span class="icon">🏠</span>
+              <span class="text">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="portfolio.html">
+              <span class="icon">✨</span>
+              <span class="text">Portfolio</span>
+            </a>
+          </li>
+          <li>
+            <a href="music.html">
+              <span class="icon">🎵</span>
+              <span class="text">Music</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      
+      <!-- 主要內容區域 -->
+      <div id="sketch-container"></div>
+    </div>
+    
+    <script src="libraries/p5.sound.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.dom.min.js"></script>
+    
+    <script src="musicScript.js"></script>
+  </body>
+</html>
