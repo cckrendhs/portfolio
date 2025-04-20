@@ -4,6 +4,7 @@ let currentIndex = {
   slider2: 0,
   slider4: 0,
   slider6: 0, // ✅ 新增 slider6
+  slider7: 0,
 };
 
 // 根據 slider ID 傳入對應索引名稱
@@ -16,6 +17,7 @@ function moveSlide(direction, sliderId) {
   else if (sliderId === "slider2") slideClass = ".slide2";
   else if (sliderId === "slider4") slideClass = ".slide4";
   else if (sliderId === "slider6") slideClass = ".slide6"; // ✅ 加入 slider6
+    else if (sliderId === "slider7") slideClass = ".slide7";
   else return;
 
   const slides = slider.querySelectorAll(slideClass);
@@ -51,6 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { sliderId: "slider2", className: ".image-slider2" },
     { sliderId: "slider4", className: ".image-slider4" },
     { sliderId: "slider6", className: ".image-slider6" }, // ✅ 新增 slider6
+    { sliderId: "slider7", className: ".image-slider7" },
   ];
 
   buttonSets.forEach(({ sliderId, className }) => {
